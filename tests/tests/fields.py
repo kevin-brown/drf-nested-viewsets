@@ -34,3 +34,14 @@ class RelatedFieldTests(TestCase):
         url = field.get_url(FakeModel(1), "test_nested_view", None, None)
 
         self.assertEqual(url, "/123/1/")
+
+    def test_get_url_with_map_fail(self):
+        from django.core.urlresolvers import NoReverseMatch
+
+        field = NestedRelatedField(view_name="test_nested_view", map={
+            "invalid": "match",
+        })
+        field.parent = FakeSerializer()
+
+        with self.assertRaises(NoReverseMatch):
+            url = field.get_url(FakeModel(1), "test_nested_view", None, None)
