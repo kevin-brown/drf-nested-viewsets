@@ -43,10 +43,10 @@ class NestedHyperlinkedField(object):
         return url
 
 
-class HyperlinkedIdentityField(NestedHyperlinkedField,
+class NestedIdentityField(NestedHyperlinkedField,
                                HyperlinkedIdentityField):
     pass
 
 
-class HyperlinkedRelatedField(NestedHyperlinkedField, HyperlinkedRelatedField):
+class NestedRelatedField(NestedHyperlinkedField, HyperlinkedRelatedField):
     pass
