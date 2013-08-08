@@ -24,7 +24,7 @@ setup(
     version=__version__,
     url="https://github.com/kevin-brown/drf-nested-viewsets/",
     license="MIT",
-    description="Flat URLs can only go so far, bring nested URLs to your API."
+    description="Flat URLs can only go so far, bring nested URLs to your API.",
     author="Kevin Brown",
     author_email="kbrown@rediker.com",
     packages=find_packages(exclude=["tests*", ]),
